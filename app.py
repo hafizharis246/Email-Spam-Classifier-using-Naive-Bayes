@@ -4,19 +4,11 @@ import string
 import nltk
 import os
 
-# Define a fixed directory for NLTK data
-NLTK_DIR = "/app/nltk_data"
-os.makedirs(NLTK_DIR, exist_ok=True)
 
-# Append this directory to NLTK's data path
-nltk.data.path.append(NLTK_DIR)
 
-# Forcefully download required datasets to this directory
-nltk.download('punkt', download_dir=NLTK_DIR)
-nltk.download('stopwords', download_dir=NLTK_DIR)
-
-# nltk.download('stopwords') 
-# nltk.download('punkt')
+nltk.download('stopwords') 
+nltk.download('punkt')
+nltk.download('punkt_tab')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk.tokenize import word_tokenize
